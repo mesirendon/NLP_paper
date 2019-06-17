@@ -22,9 +22,9 @@
 
 \begin{document}
 %
-\title{Conversational text composition through commonsense detection}
+\title{Conversational text composition through commonsense knowledge}
 %
-\titlerunning{Blockchain-Based Applications Proposal Architecture}
+\titlerunning{Conversational text composition through commonsense knowledge}
 % If the paper title is too long for the running head, you can set
 % an abbreviated paper title here
 %
@@ -50,7 +50,7 @@ Natural Language Processing techniques allows us to process text in wide range w
 %
 
 \section{Introduction}
-One of the artificial intelligence keystones would be definitively be having fully conversational systems to interact with people for several applications ranging from recommender systems, expert systems, to specialized chatbots and assistants \footnote{\url{https://www.youtube.com/watch?v=d40jgFZ5hXk}}.
+One of the artificial intelligence (AI) keystones would be definitively be having fully conversational systems to interact with people for several applications ranging from recommender systems, expert systems, to specialized chatbots and assistants \footnote{\url{https://www.youtube.com/watch?v=d40jgFZ5hXk}}.
 
 Several techniques based on Machine Learning (e.g. Bayesian models, SVM, supervised and unsupervised learning methods), and statistical model methods (e.g. word frequency, text rank, and inverse document frequency), have been used for a long time, with promising results.
 
@@ -66,7 +66,25 @@ cross-sectional scans along a single axis)
 
 This simple example could lead to think that it would be possible to miss that specific synset when talking about \emph{computerized tomography} when using \emph{cat} in a medical text, showing instead the most probable definition \emph{feline}. That scenario is plausible since the knowledge is strongly dependent on the quality of either unstructured texts or its scale and domain-specific knowledge \cite{Ghazvininejad2017}.
 
-Lexical semantic understanding, sustained by commonsense knowledge, enriches the meaning of words and sentences
+Lexical semantic understanding, sustained by socially shared commonsense knowledge on the core as it has the content of what people intends to know while conversing \cite{Zhou2018}.
+
+This contribution aims to:
+
+\begin{enumerate}
+	\item integrates existing work on the semantic association for construction of commonsense knowledge.
+	\item build an English conversational system using semantic association based on commonsense knowledge construction techniques.
+	\item assess the performance of the built system compared to traditional conversational approaches.
+\end{enumerate}
+
+\section{Related work}
+A key element to enrich understanding of sentences is tied to word senses. This fact is more important when the word belongs to a specific domain context. Through hybrid clustering techniques \cite{Pantel2004} chooses the best terms elements to build the initial committees (i.e. clusters of meanings for a word) out of the WordNet corpus \cite{Miller1990}, and removing the sense so through further iterations the algorithm can effectively analyze other synsets.
+
+State-of-the-art pre-trained models capture commonsense knowledge with limited value for domain-specific contexts. \cite{Efstathiou2018} proposes a general model for capturing specific domain knowledge of software engineering through a word2vec model exploting available information on Stack Overflow posts. Their work shows that the model effectively desambiguates metaphorical use of English words when it comes to this specific domain, capturing well grained relations within it.
+
+Distributional Semantic Models are another technique for supporting semantic understanding for natural language processing. These models are highly dependent on the size and quality of the corpora that has the commonsense knowledge for the comprehensive task. While English do have high quality and large scaled commonsense and domain specific information, other languages lack enough material to build comprehensive distributional models. \cite{Barzegar2018} proposes to combine lightweight machine translation model using the English Distributional Semantic Model for building enriched knowledge word vectors for other languages. By building a model leveraged by a unigram-level source-target probabilities which can be directly computed from the parallel corpora, the author gets word vectors for other languages from English DSM as feasible activity, showing up that about 66\% of improvement has been gotten from lightweight models compared to other models. Spanish got the best performance with nearly 60\%, whereas Dutch got the worst with nearly 50\%. This demonstrates that lightweight machine translation models is, in the worst case, equivalent (in some cases outperforming) to the state-of-the-art machine translation systems for translation of word pairs.
+
+As stated at the beginning, one of the important milestones on AI is having intelligent systems to perform common activities as an agent spawned at any location performing a set of actions to answer a question. These actions might require the agent to navigate, process images, understand natural language and learn. \cite{Das2018} proposes a new AI task, where an agent is dropped anywhere and must navigate processing images to gather as much information to answer questions about the environment.
+
 %
 % ---- Bibliography ----
 %
