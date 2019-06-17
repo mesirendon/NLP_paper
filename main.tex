@@ -98,7 +98,7 @@ ideas with the reality of the outside world'' \cite{Poibeau2016}. This leads to 
 	\item The knowledge about how the human brain processes the information is, though promising, very short, and it hardens the proper formalization.
 \end{enumerate}
 
-To ease the work commonsense knowledge for natural language processing, a basic assumption must be done about the knowledge: it must be isolated from perception. This assumption led to the creation of the general domain ontology library ConceptNet\cite{Speer2016}. However, these kind of databases lack accuracy formalizing specific domain contexts. Nevertheless, these very same databases have led to amazing discoveries `just' by finding patterns revealed by machine learning means \cite{Poibeau2016}.
+To ease the work commonsense knowledge for natural language processing, a basic assumption must be done about the knowledge: it must be isolated from perception. This assumption led to the creation of the general domain ontology library ConceptNet \cite{Speer2016}. However, these kind of databases lack accuracy formalizing specific domain contexts. Nevertheless, these very same databases have led to amazing discoveries `just' by finding patterns revealed by machine learning means \cite{Poibeau2016}.
 
 On the other hand, both, cognitive science and natural language processing, have evolved independently for more than thirty years, in part because the technology was not properly advanced, in part because there was not enough information as we do currently have, in part because both fields were not well related \cite{Poibeau2016}.
 
@@ -111,6 +111,22 @@ Other work has focused on the understanding of how children acquire language kno
 Graph theory has been used to model lexicon as an intricate network where words and concepts are seen as nodes interconnected to others by specific relations (e.g. proximity in sentences, synonyms, hypernyms hyponyms, synsets, etc) \cite{Poibeau2016}.
 
 Although not consider for this work, awareness must be raised for the very adaptive nature of languages. Languages evolve to use new coined words, giving new meanings to existing ones, adopting terms from other dialects or languages \cite{Poibeau2016}.
+
+Semantic understanding leveraged by commonsense knowledge is essential to natural language processing tasks. Recent neural models proposed conversation generation based on exclusively conversational data, without deep understanding of users' input. The training used for these models is either unstructured text or domain-specific knowledge threefold tuples (i.e. entities). As stated before, this makes the model to be tightly-coupled to the data-scale and quality. The contribution of \cite{Zhou2018}, presents a commonsense knowledge aware conversational model that retrieves some knowledge graphs out of the knowledge base to enrich the text meaning and respond informatively and appropriately. Using both, an static and a dynamic graphs attention mechanisms a better understanding of the text is achieved. The former is used to enrich the semantic representation of the text. The latest reads not only the knowledge graphs but the entities (as threefold tuples, or triples for short) using the semantic information from graphs and entities to generate better responses. The following are the main results of this work:
+
+\begin{enumerate}
+	\item Using a large-scale commonsense knowledge in neural conversation generation to understand and generate more appropriate responses improves the responses quality.
+	\item Using entities not like isolated elements, but as a whole through a graph leads to a better interpretation of the text semantics.
+\end{enumerate}
+
+To investigate the impact of commonsense knowledge in the context of semantic association between lexical concepts, \cite{Ruggeri2019} proposes a work done by extending and integrating preliminary works on different aspects such as the perception of similarity with lexical entities and disambiguation of ConceptNet \cite{Speer2016} instances. Then three main research questions where formulated to validate:
+
+\begin{enumerate}
+	\item if functional/behavioral information improves perception of meaning and semantic association.
+	\item if it was possible to integrate commonsense knowledge into the WordNet lexicon and determine if such integration improves accuracy of semantic association classifiers.
+	\item if using commonsense knowledge helps label and explain semantic association.
+\end{enumerate}
+
 %
 % ---- Bibliography ----
 %
